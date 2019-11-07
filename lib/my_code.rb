@@ -6,13 +6,13 @@ def map(array)
   new_array
 end  
 
-def reduce(array, starting_point = 0)
-  if starting_point == 0
-    accumulator = array[0]
-    start_index = 1
-  else
+def reduce(array, starting_point = nil)
+  if starting_point
     accumulator = starting_point
     start_index = 0
+  else
+    accumulator = array[0]
+    start_index = 1
   end
   puts '****************'
   puts accumulator
