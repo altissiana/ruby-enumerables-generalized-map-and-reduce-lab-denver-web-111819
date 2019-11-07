@@ -7,9 +7,9 @@ def map(array)
 end  
 
 def reduce(array, starting_point = 0)
-  total = starting_point 
+  total = 0
   array.each do |x|
-    total = total + yield(x)
+    total = total + yield(starting_point, x)
   end
   total
 end  
