@@ -14,8 +14,6 @@ def reduce(array, starting_point = nil)
     accumulator = array[0]
     start_index = 1
   end
-  puts '****************'
-  puts accumulator
   for i in start_index...array.length
     x = array[i]
     accumulator = yield(accumulator, x)
