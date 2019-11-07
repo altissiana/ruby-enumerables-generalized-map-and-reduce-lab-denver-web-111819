@@ -7,7 +7,11 @@ def map(array)
 end  
 
 def reduce(array, starting_point = 0)
-  accumulator = yield(0, starting_point)
+  if starting_point == 0
+    accumulator = array[0]
+  else
+    accumulator = starting_point
+  end
   puts '****************'
   puts accumulator
   array.each do |x|
