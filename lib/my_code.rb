@@ -9,12 +9,15 @@ end
 def reduce(array, starting_point = 0)
   if starting_point == 0
     accumulator = array[0]
+    start_index = 1
   else
     accumulator = starting_point
+    start_index = 0
   end
   puts '****************'
   puts accumulator
-  array.each do |x|
+  for i in start_index...array.length
+    x = array[i]
     accumulator = yield(accumulator, x)
   end
   accumulator
